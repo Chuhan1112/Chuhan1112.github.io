@@ -5,10 +5,10 @@
 </div>
 <img src="" id="pic" width="75%">
 
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0"> </script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0/dist/tf.min.js"></script>
 <!--加载模型-->
 <script>
-    const MODEL_URL = 'https://chuhan1112.github.io/web_model2/model.json';
+    const MODEL_URL = 'https://chuhan1112.github.io/web_model3/model.json';
 
     let model = null;
     tf.loadGraphModel(MODEL_URL).then((value)=>{
@@ -39,7 +39,7 @@
         image_tensor = tf.cast(image_tensor, 'float32');
         // console.log(image_tensor.shape);//[1, 2977, 2770, 3]
         // 图片缩放，转换为模型需要的大小
-        image_tensor = tf.image.resizeBilinear(image_tensor, [299, 299]);
+        image_tensor = tf.image.resizeBilinear(image_tensor, [224, 224]);
         console.log(image_tensor);//[1, 299, 299, 3]
         //The shape of dict['Placeholder'] provided in model.execute(dict) must be [-1,299,299,3]
 
