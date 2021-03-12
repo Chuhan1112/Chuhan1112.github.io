@@ -1,0 +1,60 @@
+<input type="file" class="custom-file-input" id="file" accept="image/*" capture="camera">
+
+<input class="form-control" id="result" readonly="readonly">
+
+<img src="" id="pic">
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0"> </script>
+<!--加载模型-->
+<script>
+    const MODEL_URL = 'https://chuhan1112.github.io/web_model2/model.json';
+
+    let model = null;
+    tf.loadGraphModel(MODEL_URL).then((value)=>{
+        model = value;
+        console.log('model loaded');
+    }, (error)=>{
+        console.log(error);
+    });
+    let image = document.getElementById('pic');
+
+    // 图片预览
+    document.getElementById('file').addEventListener('change', (ev)=>{
+        let reader = new FileReader();
+        reader.addEventListener('load', (e)=>{
+            image.src = e.target.result;
+        });
+        reader.readAsDataURL(ev.target.files[0]);
+    });
+    //图片数据转换及预测
+    // 图片分类
+    const CLASSIFY = ['54 1', '54 2', '54 3'];
+
+   // 图片处理及评估
+    image.addEventListener('load', ()=>{
+        let image_tensor = tf.browser.fromPixels(image, 3);  //Creates a tf.Tensor from an image.
+        // 三维张量转四维张量
+        image_tensor = tf.expandDims(image_tensor,0);
+        image_tensor = tf.cast(image_tensor, 'float32');
+        // console.log(image_tensor.shape);//[1, 2977, 2770, 3]
+        // 图片缩放，转换为模型需要的大小
+        image_tensor = tf.image.resizeBilinear(image_tensor, [299, 299]);
+        console.log(image_tensor);//[1, 299, 299, 3]
+        //The shape of dict['Placeholder'] provided in model.execute(dict) must be [-1,299,299,3]
+
+        normalized = tf.div(tf.sub(image_tensor, [0]), [255]) //正则化牛逼
+
+        let predictions = model.predict(normalized);
+        console.log(predictions.dataSync());
+        //console.log(tf.argMax(predictions, 1).dataSync());
+        let label = tf.argMax(predictions, 1).dataSync()[0];
+        /*
+        const {values, indices} = tf.topk(predictions.dataSync());
+        for(let i = 0; i<3; i++)
+            console.log(values[i])
+        */
+
+        result.value = CLASSIFY[label];
+        console.log(result.value);
+    });
+</script>
