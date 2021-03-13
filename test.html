@@ -3,12 +3,12 @@
 
 <input class="form-control" id="result" readonly="readonly">
 </div>
-<img src="" id="pic" width="75%">
+<img src="" id="pic" width="65%">
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0/dist/tf.min.js"></script>
 <!--加载模型-->
 <script>
-    const MODEL_URL = 'https://chuhan1112.github.io/web_model2/model.json';
+    const MODEL_URL = 'https://chuhan1112.github.io/new_web_model2/model.json';
 
     let model = null;
     tf.loadGraphModel(MODEL_URL).then((value)=>{
@@ -29,7 +29,7 @@
     });
     //图片数据转换及预测
     // 图片分类
-    const CLASSIFY = ['52','53','54_1', '54_2', '54_3'];
+    const CLASSIFY = ['52', '54_1', '54_2', '54_3'];
 
    // 图片处理及评估
     image.addEventListener('load', ()=>{
