@@ -29,23 +29,26 @@
     });
     //图片数据转换及预测
     // 图片分类
-    const CLASSIFY = ['54_1', '54_2', '54_3','54_4','54_5',];
+    const CLASSIFY = ['52','53','54_1', '54_2', '54_3'];
 
    // 图片处理及评估
     image.addEventListener('load', ()=>{
         let image_tensor = tf.browser.fromPixels(image, 3);  //Creates a tf.Tensor from an image.
         // 三维张量转四维张量
         image_tensor = tf.cast(image_tensor, 'float32');
+        normalized = tf.div(tf.sub(image_tensor, [0]), [255]) //正则化牛逼
         image_tensor = tf.expandDims(image_tensor,0);
+        
+
         // console.log(image_tensor.shape);//[1, 2977, 2770, 3]
         // 图片缩放，转换为模型需要的大小
-        image_tensor = tf.image.resizeBilinear(image_tensor, [224, 224]);
+        image_tensor = tf.image.resizeBilinear(normalized, [224, 224]);
         console.log(image_tensor);//[1, 299, 299, 3]
         //The shape of dict['Placeholder'] provided in model.execute(dict) must be [-1,299,299,3]
 
-        normalized = tf.div(tf.sub(image_tensor, [0]), [255]) //正则化牛逼
+        
 
-        let predictions = model.predict(normalized);
+        let predictions = model.predict(image_tensor);
         console.log(predictions.dataSync());
         //console.log(tf.argMax(predictions, 1).dataSync());
         let label = tf.argMax(predictions, 1).dataSync()[0];
