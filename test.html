@@ -37,12 +37,12 @@
         // 三维张量转四维张量
         image_tensor = tf.cast(image_tensor, 'float32');
         normalized = tf.div(tf.sub(image_tensor, [0]), [255]) //正则化牛逼
-        image_tensor = tf.expandDims(image_tensor,0);
+        image_tensor = tf.expandDims(normalized,0);
         
 
         // console.log(image_tensor.shape);//[1, 2977, 2770, 3]
         // 图片缩放，转换为模型需要的大小
-        image_tensor = tf.image.resizeBilinear(normalized, [224, 224]);
+        image_tensor = tf.image.resizeBilinear(image_tensor, [224, 224]);
         console.log(image_tensor);//[1, 299, 299, 3]
         //The shape of dict['Placeholder'] provided in model.execute(dict) must be [-1,299,299,3]
 
