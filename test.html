@@ -1,52 +1,54 @@
 <div>
-<input type="file" class="custom-file-input" id="file" accept="image/*" capture="camera">
+    <input type="file" class="custom-file-input" id="file" accept="image/*" capture="camera">
 
-<input class="form-control" id="result" readonly="readonly">
+    <input class="form-control" id="result" readonly="readonly">
 </div>
 <img src="" id="pic" width="65%">
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.3.0/dist/tf.min.js"></script>
 <!--加载模型-->
 <script>
-    const MODEL_URL = 'https://chuhan1112.github.io/new_web_model2/model.json';
+    const MODEL_URL = 'https://chuhan1112.github.io/web_model5/model.json';
 
     let model = null;
-    tf.loadGraphModel(MODEL_URL).then((value)=>{
+    tf.loadGraphModel(MODEL_URL).then((value) => {
         model = value;
         console.log('model loaded');
-    }, (error)=>{
+    }, (error) => {
         console.log(error);
     });
     let image = document.getElementById('pic');
 
     // 图片预览
-    document.getElementById('file').addEventListener('change', (ev)=>{
+    document.getElementById('file').addEventListener('change', (ev) => {
         let reader = new FileReader();
-        reader.addEventListener('load', (e)=>{
+        reader.addEventListener('load', (e) => {
             image.src = e.target.result;
         });
         reader.readAsDataURL(ev.target.files[0]);
     });
     //图片数据转换及预测
     // 图片分类
-    const CLASSIFY = ['54_1', '54_2', '54_3','Appropriation Expose'];
+    const CLASSIFY = ['54_1', '54_2', '54_3', 'Appropriation Expose', 'paradise palms holiday villaqe',
+        'ukippers'
+    ];
 
-   // 图片处理及评估
-    image.addEventListener('load', ()=>{
-        let image_tensor = tf.browser.fromPixels(image, 3);  //Creates a tf.Tensor from an image.
+    // 图片处理及评估
+    image.addEventListener('load', () => {
+        let image_tensor = tf.browser.fromPixels(image, 3); //Creates a tf.Tensor from an image.
         // 三维张量转四维张量
         image_tensor = tf.cast(image_tensor, 'float32');
         normalized = tf.div(tf.sub(image_tensor, [0]), [255]) //正则化牛逼
-        image_tensor = tf.expandDims(normalized,0);
-        
+        image_tensor = tf.expandDims(normalized, 0);
+
 
         // console.log(image_tensor.shape);//[1, 2977, 2770, 3]
         // 图片缩放，转换为模型需要的大小
         image_tensor = tf.image.resizeBilinear(image_tensor, [224, 224]);
-        console.log(image_tensor);//[1, 299, 299, 3]
+        console.log(image_tensor); //[1, 299, 299, 3]
         //The shape of dict['Placeholder'] provided in model.execute(dict) must be [-1,299,299,3]
 
-        
+
 
         let predictions = model.predict(image_tensor);
         console.log(predictions.dataSync());
