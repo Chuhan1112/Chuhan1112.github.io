@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-22T15:15:30.387Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="XW2NnpI4kSQmSI9aLTbc" version="21.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-22T15:21:32.787Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="68zQSFXmh3r-Y6cIVGDb" version="21.3.2" type="github">
   <diagram name="第 1 页" id="eJCv2PBCAG6yWB4a6nhj">
     <mxGraphModel dx="893" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -44,26 +44,26 @@
         <mxCell id="kbp1W1BHpDVRfjKskcVf-13" value="&lt;font size=&quot;3&quot; face=&quot;Lucida Console&quot;&gt;提取年龄信息&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="650" y="210" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="kbp1W1BHpDVRfjKskcVf-24" value="相似度高于阈值" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="kbp1W1BHpDVRfjKskcVf-15" target="kbp1W1BHpDVRfjKskcVf-23" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="445" y="380" />
-              <mxPoint x="445" y="380" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="kbp1W1BHpDVRfjKskcVf-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="kbp1W1BHpDVRfjKskcVf-15" target="kbp1W1BHpDVRfjKskcVf-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="kbp1W1BHpDVRfjKskcVf-30" value="相似度低于阈值" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="kbp1W1BHpDVRfjKskcVf-29" vertex="1" connectable="0">
+        <mxCell id="kbp1W1BHpDVRfjKskcVf-30" value="未成年" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="kbp1W1BHpDVRfjKskcVf-29" vertex="1" connectable="0">
           <mxGeometry x="-0.0439" y="-1" relative="1" as="geometry">
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kbp1W1BHpDVRfjKskcVf-15" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;鱼骨&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="H0Yiqih6-B8NDiTEWmIC-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kbp1W1BHpDVRfjKskcVf-15" target="kbp1W1BHpDVRfjKskcVf-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H0Yiqih6-B8NDiTEWmIC-2" value="成年" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="H0Yiqih6-B8NDiTEWmIC-1">
+          <mxGeometry x="-0.0444" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kbp1W1BHpDVRfjKskcVf-15" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;预估是否未成年&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="400" y="290" width="175" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="kbp1W1BHpDVRfjKskcVf-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="kbp1W1BHpDVRfjKskcVf-23" target="kbp1W1BHpDVRfjKskcVf-1" edge="1">
+        <mxCell id="H0Yiqih6-B8NDiTEWmIC-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kbp1W1BHpDVRfjKskcVf-23" target="H0Yiqih6-B8NDiTEWmIC-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kbp1W1BHpDVRfjKskcVf-23" value="&lt;font size=&quot;3&quot; face=&quot;Lucida Console&quot;&gt;验证通过&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -88,11 +88,17 @@
         <mxCell id="kbp1W1BHpDVRfjKskcVf-28" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;是否重试&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="183.75" y="340" width="122.5" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="kbp1W1BHpDVRfjKskcVf-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="kbp1W1BHpDVRfjKskcVf-33" target="kbp1W1BHpDVRfjKskcVf-1" edge="1">
+        <mxCell id="H0Yiqih6-B8NDiTEWmIC-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kbp1W1BHpDVRfjKskcVf-33" target="H0Yiqih6-B8NDiTEWmIC-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="kbp1W1BHpDVRfjKskcVf-33" value="&lt;font size=&quot;3&quot; face=&quot;Lucida Console&quot;&gt;验证不通过&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="192.5" y="480" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H0Yiqih6-B8NDiTEWmIC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="H0Yiqih6-B8NDiTEWmIC-3" target="kbp1W1BHpDVRfjKskcVf-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H0Yiqih6-B8NDiTEWmIC-3" value="&lt;font size=&quot;3&quot; face=&quot;Lucida Console&quot;&gt;向游戏测发送结果回调&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="267.5" y="570" width="167.5" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
