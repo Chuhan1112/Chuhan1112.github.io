@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-25T10:10:43.223Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.31" etag="PM1kREePgmWKTIj1yuOK" version="21.7.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-25T10:14:06.537Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.31" etag="0msayDkpB6jsjlh-uWG2" version="21.7.1" type="github">
   <diagram name="第 1 页" id="Bck55D9Km46n5Ga4YMbU">
     <mxGraphModel dx="2384" dy="1307" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
       <root>
@@ -288,6 +288,48 @@
             <mxPoint x="439" y="1350" as="sourcePoint" />
             <mxPoint x="355" y="1250" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-94" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;配置信息&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="1010" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-95" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1050" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-96" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;音色：妲己&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-97" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;情绪：兴奋&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-98" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;推流地址：rtmp://XXXX&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1180" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-99" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;直播平台：快手&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1060" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-100" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;直播布局：C&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1120" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-101" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;配置信息&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1439" y="1010" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-102" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1329" y="1050" width="270" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-103" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;音色：原声&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="1060" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-104" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;情绪：无&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="1120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-105" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;推流地址：无&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1339" y="1180" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-106" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;直播平台：无&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1449" y="1060" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0f2K5YkPgI1Y6RwSM53R-107" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;直播布局：默认&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1449" y="1120" width="130" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
